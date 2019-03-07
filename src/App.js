@@ -23,13 +23,6 @@ class App extends Component {
 
   onMemoRemove = (index) => {
     const { notes } = this.state;
-    if (index <= 0 || index > notes.length) {
-      return;
-    } 
-    notes.splice(index, 1);
-    this.setState({
-      notes
-    });
   }
 
   render() {
