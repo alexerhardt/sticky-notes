@@ -4,9 +4,14 @@ import StickyNote from './StickyNote';
 const StickyBoard = (props) => {
   return (
     <div>
-      {props.notes.map((note, i) => {
-        return <StickyNote text={note} index={i} />
-      })}
+      {props.notes.map((note, i) => (
+        <StickyNote 
+          text={note} 
+          index={i} 
+          key={i}
+          onMemoRemove={props.onMemoRemove}
+        />
+      ))}
     </div>
   )
 }

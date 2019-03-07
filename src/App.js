@@ -14,11 +14,21 @@ class App extends Component {
   }
 
   onMemoSubmit = () => {
-    const { notes, userInput } = this.state;
-    notes.push(userInput);
-    this.setState({ 
-      notes,
+    const { userInput } = this.state;
+    this.setState(prevState => ({ 
+      notes: [...prevState.notes, userInput],
       userInput: '',
+    }));
+  }
+
+  onMemoRemove = (index) => {
+    const { notes } = this.state;
+    if (index <= 0 || index > notes.length) {
+      return;
+    } 
+    notes.splice(index, 1);
+    this.setState({
+      notes
     });
   }
 
@@ -32,6 +42,7 @@ class App extends Component {
         />
         <StickyBoard
           notes={this.state.notes}
+          onMemoRemove={this.onMemoRemove}
         />
       </div>
     );
