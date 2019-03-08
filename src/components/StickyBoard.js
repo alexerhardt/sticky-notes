@@ -7,6 +7,7 @@ const StyledStickyBoard = styled.div`
   background-color: lightblue;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
   grid-gap: 1rem;
 `
 
