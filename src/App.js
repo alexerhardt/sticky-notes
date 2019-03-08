@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TextInput from './components/TextInput';
 import StickyBoard from './components/StickyBoard';
-import './App.css';
 
 class App extends Component {
   state = {

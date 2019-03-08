@@ -1,12 +1,19 @@
 import React from 'react';
-import './StickyNote.css';
+import styled from 'styled-components';
+
+const StyledStickyNote = styled.div`
+  background-color: lightgoldenrodyellow;
+  grid-column: 1;
+  min-height: 50px;
+`
+
 
 const StickyNote = (props) => {
   return (
-    <div className="sticky-note">
+    <StyledStickyNote>
       {props.text}
       <button onClick={() => props.onMemoRemove(props.index)}>X</button>
-    </div>
+    </StyledStickyNote>
   )
 }
 
