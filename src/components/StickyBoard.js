@@ -13,12 +13,12 @@ const StickyBoard = (props) => {
 
     for(let i = 0; i < numRows; i+= numCols) {
       const rowNotes = notes.slice(i, i + numCols);
-      const row = <Row key={shortid.generate()} 
-                       rowIndex={i} 
-                       numCols={numCols} 
-                       notes={rowNotes} 
-                       onMemoRemove={onMemoRemove}
-                    />;
+      const row = <Row 
+                    key={shortid.generate()} 
+                    rowIndex={i} 
+                    notes={rowNotes} 
+                    onMemoRemove={onMemoRemove}
+                  />;
       toRender = [...toRender, row];
     } 
   }

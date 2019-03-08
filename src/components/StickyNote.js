@@ -4,7 +4,7 @@ import './StickyNote.css';
 const StickyNote = (props) => {
   return (
     <div className="sticky-note">
-      {props.text}
+      {props.note}
       <button onClick={() => props.onMemoRemove(props.index)}>X</button>
     </div>
   )

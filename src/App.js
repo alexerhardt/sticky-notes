@@ -3,6 +3,8 @@ import TextInput from './components/TextInput';
 import StickyBoard from './components/StickyBoard';
 import './App.css';
 
+const NUMCOLS = 6;
+
 class App extends Component {
   state = {
     notes: [],
@@ -40,6 +42,7 @@ class App extends Component {
         />
         <StickyBoard
           notes={this.state.notes}
+          numCols={NUMCOLS}
           onMemoRemove={this.onMemoRemove}
         />
       </div>
