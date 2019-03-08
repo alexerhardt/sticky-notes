@@ -7,7 +7,6 @@ const StyledStickyNote = styled.div`
   min-height: 50px;
 `
 
-
 const StickyNote = (props) => {
   return (
     <StyledStickyNote>
