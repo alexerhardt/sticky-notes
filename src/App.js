@@ -32,15 +32,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TextInput 
-          value={this.state.userInput}
-          onChange={this.onMemoChange} 
-          onClick={this.onMemoSubmit}
-        />
-        <StickyBoard
-          notes={this.state.notes}
-          onMemoRemove={this.onMemoRemove}
-        />
+        <div className="row text-center">
+          <h1>Sticky Notez</h1>
+        </div>
+
+        <div className="row">
+          <TextInput 
+            value={this.state.userInput}
+            onChange={this.onMemoChange} 
+            onClick={this.onMemoSubmit}
+          />
+        </div>
+
+        <div className="row">
+          <StickyBoard
+            notes={this.state.notes}
+            onMemoRemove={this.onMemoRemove}
+          />
+        </div>
       </div>
     );
   }

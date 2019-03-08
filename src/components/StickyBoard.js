@@ -9,6 +9,7 @@ const StyledStickyBoard = styled.div`
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
   grid-gap: 1rem;
+  padding: 2rem;
 `
 
 const EmptyMessage = styled.h1`
